@@ -35,12 +35,26 @@ function listItems(){
 }
 listItems();
 // Question #3
-function empty(item) {
-  console.log('empty:', item);
-    basket.length = 0; //Should hopefully remove all items in array
+// function empty(item) {
+//   console.log('empty:', item);
+//     basket.length = 0; //Should hopefully remove all items in array
+// }
+// empty(basket.length=0);
+// console.log('Basket is now empty:', basket);
+
+function empty(item){
+  console.log('in empty');
+
+  // I was playing around and used the while method to reset the array
+    // while(item.length > 0){
+    //   item.pop();
+
+  item.splice(0,item.length);
+    // I created a splice to reset the basket array - this works but maybe I'm not fully undderstanding what to do.
 }
-empty(basket.length=0);
-console.log('Basket is now empty:', basket);
+empty(basket);
+// running empty function for basket
+console.log(basket);// Shows clear array in basket
 
 // Stretch Question #4
 const maxItems = 5;
